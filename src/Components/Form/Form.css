@@ -1,0 +1,97 @@
+.formflex{
+    @apply grid grid-flow-col gap-5 items-center mt-5 grid-rows-[repeat(2,auto)] lg:grid-rows-[repeat(1,auto)];
+    grid-auto-columns: 1fr;
+}
+
+.formflex div{
+    @apply w-full;
+}
+
+.ant-checkbox-wrapper{
+    @apply items-center;
+}
+
+.formflex div .ant-picker, .formflex div .ant-input-affix-wrapper{
+    @apply w-full mt-2 rounded-xl py-2;
+    background-color: #0000000f;
+}
+
+.formflex div input{
+    border-right: 1px solid black !important;
+    border-radius: 0px;
+    margin-right: 8px;
+    background-color: transparent;
+}
+
+.formflex div .ant-input-suffix, .anticon-calendar{
+    @apply text-primary;
+}
+
+.formflex label{
+    @apply text-xl font-black opacity-60 font-['Poppins'];
+}
+
+.title-form{
+    @apply text-4xl font-bold mb-7;
+    color: black;
+}
+
+.btn-submit{
+    @apply max-w-xs bg-primary font-bold py-2 px-4 text-center cursor-pointer !rounded-full;
+    color: white;
+}
+
+.btn-submit:hover {
+    color: #E95E00;
+    background-color: white;
+    border: 2px solid #E95E00;
+}
+
+.btn-submit.back-to-service{
+    @apply max-w-xs font-bold py-2 px-4 text-center cursor-pointer !rounded-full;
+    color: white;
+    background-color: #1c1c1c;
+}
+
+.btn-submit.back-to-service:hover {
+    color: #1c1c1c;
+    background-color: white;
+    border: 2px solid #1c1c1c;
+}
+
+.ant-checkbox-inner{
+    @apply !border-2 !border-primary p-2;
+}
+
+.check-apply-financing{
+    @apply flex flex-col lg:flex-row gap-5 items-center text-xl font-semibold;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner{
+    @apply bg-primary;
+}
+
+.processCompleted{
+    @apply text-center;
+}
+
+.process-Completed-Text{
+    @apply p-10 mb-5 rounded-xl;
+    background-color: #FFE9D9;
+}
+
+.process-Completed-Text h5{
+    @apply text-2xl font-semibold text-primary text-center;
+}
+
+.process-Completed-Text p{
+    @apply text-lg text-base;
+}
+
+.process-Completed-btn{
+    @apply flex justify-between;
+}
+
+.process-Completed-btn h6{
+    @apply w-48;
+}

@@ -1,0 +1,113 @@
+.calculatorContainer{
+    @apply flex flex-col xl:flex-row justify-between py-5 px-10 rounded-2xl gap-5 mt-5 relative;
+    background-color: white;
+}
+
+.calculator-list-service{
+    @apply flex flex-col gap-5;
+}
+
+.calculator-item-service{
+    @apply flex flex-col md:flex-row items-center p-5 rounded-2xl gap-5;
+    background-color: #FFE9D9;
+}
+
+.calculator-item-image img{
+    @apply max-w-md w-48 object-cover rounded-lg;
+}
+
+.calculator-item-name h4{
+    @apply text-primary text-lg md:text-2xl font-bold;
+}
+
+.activecard{
+    @apply bg-primary;
+}
+
+.activecard h4{
+    color:white;
+}
+
+.calculator-data-container{
+    @apply p-8 rounded-lg w-full;
+    background-color: #eeeeee;
+}
+
+.calculate-data-info h5{
+    @apply text-sm sm:text-xl lg:text-2xl font-bold;
+}
+
+.calculate-data-info {
+    @apply flex flex-col sm:flex-row items-center gap-5;
+}
+
+.data-info-icon{
+    @apply text-primary text-2xl rotate-180;
+}
+
+.calculate-inputs{
+    @apply flex flex-col md:flex-row gap-5 text-2xl font-bold italic w-min 2xl:w-full
+}
+
+.calculate-inputs label{
+    @apply mr-4;
+}
+
+.calculate-inputs input{
+    @apply max-w-[150px] border-primary border-2 rounded-lg;
+}
+
+.calculate-form{
+    @apply flex flex-col 2xl:flex-row justify-between items-center gap-5;
+}
+
+.calculate-button h3{
+    @apply bg-primary rounded-full border-primary border-2 px-5 py-2 text-lg font-bold cursor-pointer;
+    color:white;
+}
+
+.calculate-button h3:hover{
+    @apply text-primary rounded-full px-5 py-2 text-lg font-bold;
+    background-color: white;
+}
+
+.calculate-card-info{
+    @apply grid grid-flow-col grid-rows-[repeat(2,auto)] md:grid-rows-[repeat(1,auto)] grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] gap-8 mt-8 mb-8 text-center;
+}
+
+.calculate-card-items{
+    @apply p-5 rounded-xl;
+    background-color: white;
+}
+
+.calculate-card-items p{
+    @apply text-base lg:text-lg font-semibold;
+}
+
+.calculate-card-items h4{
+    @apply text-primary text-3xl lg:text-5xl font-bold italic;
+}
+
+.calculate-img img{
+    @apply m-auto;
+}
+
+.calculate-img{
+    margin-bottom: -100px !important;
+}
+
+.modalInfo{
+    @apply p-5;
+    background-color: #ffffffd4 !important;
+    position: absolute;
+    width: -webkit-fill-available;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.modalInfo img{
+    @apply absolute top-0 bottom-0 left-0 right-0 m-auto w-[65%];
+}

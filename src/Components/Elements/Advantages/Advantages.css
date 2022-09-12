@@ -1,0 +1,24 @@
+.AdvantagesContent{
+    @apply grid grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)] gap-10 p-10;
+}
+
+.AdvantagesItem{
+    @apply rounded-xl p-10;
+    background-color: #FFE9D9;
+}
+
+.AdvantagesItemTitle{
+    @apply text-2xl font-bold text-primary mb-5;
+}
+
+.AdvantagesItemText{
+    @apply text-lg;
+}
+
+.AdvantagesItemActive{
+    @apply bg-primary;
+}
+
+.AdvantagesItemActive .AdvantagesItemTitle, .AdvantagesItemActive .AdvantagesItemText{
+    color: white;
+}

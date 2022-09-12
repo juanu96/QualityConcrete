@@ -1,0 +1,67 @@
+.PatternedContainer{
+    margin-top:-65px;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active{
+    background-color: #ffffff !important;
+}
+
+.ant-tabs-tab{
+    background-color: #FFC39B !important;
+    min-width: 150px;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.ant-tabs-tab *{
+    @apply text-sm sm:text-xl font-bold;
+    color: black !important;
+    justify-content: center !important;
+}
+
+.ant-tabs-tab{
+    justify-content: center !important;
+}
+
+.ant-tabs-content{
+    @apply p-5;
+}
+
+.content-tabs-stamped{
+    @apply flex flex-col lg:flex-row gap-5;
+}
+
+.stamped-container{
+    @apply flex gap-5;
+}
+
+.card-item-data-info-full{
+    @apply w-full;
+}
+
+.item-tabs-stamped{
+    @apply grid gap-5 grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,auto)];
+}
+
+.item-tabs-stamped-elements{
+    @apply flex gap-5 rounded-xl px-4 py-2 items-center;
+    background-color: #FFE9D9;
+}
+
+.item-tabs-stamped-elements-image{
+    @apply rounded-xl p-3;
+    background-color: #F2F2F2;
+}
+
+.item-tabs-stamped-elements-text{
+    @apply text-sm sm:text-xl font-bold;
+}
+
+.stampedActive{
+    @apply bg-primary;
+}
+
+.stampedActive .item-tabs-stamped-elements-text{
+    color:white;
+}
+

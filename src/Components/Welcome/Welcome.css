@@ -1,0 +1,82 @@
+.content-welcome{
+    @apply grid grid-flow-col items-center;
+}
+
+
+.logo{
+    @apply bg-cover bg-right bg-no-repeat hidden lg:flex items-center justify-center pl-10  h-[100vh];
+    background-image: url('https://qualityconcreteconstructionllc.com/wp-content/uploads/2022/06/Background.jpg');
+}
+
+.content-welcome{
+    @apply lg:pr-10;
+}
+
+@media all and (max-width: 1024px) {
+    .content-mobile-welcome{
+        @apply p-10;
+    }
+}
+
+.logo .img-content{
+    @apply flex rounded-full shadow-2xl  p-2 max-w-[200px];
+    background-color: white;
+}
+
+.images-services{
+    @apply flex flex-col;
+}
+
+.img-services{
+    @apply w-[50%] max-w-[180px] float-right;
+}
+
+.img-active{
+    @apply  max-w-[450px] float-right;
+}
+
+.text-welcome{
+    @apply text-primary;
+}
+
+.title-text{
+    @apply text-2xl lg:text-4xl text-center;
+}
+
+.text-content{
+    @apply text-center text-xl lg:text-2xl;
+}
+
+.services-select h3{
+    @apply text-center text-xl lg:text-2xl mt-16;
+}
+
+.services-select ul li.item-service{
+    @apply text-center text-2xl lg:text-4xl font-extrabold mt-5 cursor-pointer;
+}
+
+.item-service.active{
+    @apply text-primary text-2xl md:!text-4xl lg:!text-6xl;
+}
+
+.button{
+    @apply bg-primary text-base lg:!text-xl text-center mt-10 m-auto px-6 py-2 rounded-full cursor-pointer;
+    color: white;
+    width: fit-content;
+    border: 2px solid #E95E00;
+}
+
+.button:hover{
+    color: #E95E00;
+    background-color: white;
+    width: fit-content;
+    border: 2px solid #E95E00;
+}
+
+.img-content-mobile{
+    @apply block lg:hidden  m-auto rounded-full shadow-2xl  p-2 max-w-[200px] mb-10;
+}
+
+.img-logo-mobile{
+    @apply max-w-[60%]
+}

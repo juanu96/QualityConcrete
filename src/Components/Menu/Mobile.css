@@ -1,0 +1,16 @@
+.panelmobilemenu .item-menu{
+    @apply text-2xl font-bold;
+}
+
+.panelmobilemenu .item-menu p{
+    @apply text-center;
+}
+
+.panelmobilemenu ul li.item-menu.menu-active::before{
+    content: none;
+}
+
+.panelmobilemenu .menu-active p{
+    @apply text-3xl;
+    color:#E95E00 !important;
+}

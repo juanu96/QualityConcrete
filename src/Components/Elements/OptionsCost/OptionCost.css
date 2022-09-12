@@ -1,0 +1,62 @@
+.ContentOptionCost{
+    @apply flex flex-col lg:flex-row items-center gap-5;
+}
+
+.ItemsOptionsCost{
+    @apply flex flex-col gap-5;
+}
+
+.ItemOptionCost{
+    @apply flex items-center gap-5 p-4 rounded-xl;
+    background-color: #FFE9D9;
+}
+
+.ActiveItemOptionCost{
+    @apply bg-primary;
+    color:white;
+}
+
+.ImageOptionCost img{
+    @apply rounded-xl;
+    min-width: 100%;
+    max-width: 170px;
+    object-fit: cover;
+    min-height: 75px;
+}
+
+.NameOptionCost{
+    @apply text-base md:text-2xl font-bold;
+}
+
+.SelectedOptionCost{
+    @apply rounded-xl w-full p-5;
+    background-color: #DEDEDE;
+}
+
+.SelectedOptionCostImage{
+    @apply rounded-xl w-full object-cover;
+}
+
+.SelectedOptionCostTitle{
+    @apply text-2xl md:text-4xl font-bold mb-5;
+}
+
+.SelectedOptionCostInfo{
+    @apply text-xl font-bold mb-5 flex flex-col md:flex-row mt-5 items-center gap-8;
+}
+
+.SelectedOptionCostInfo h5{
+    @apply text-3xl font-bold mb-0;
+}
+
+.SelectedOptionCostInfo svg{
+    @apply text-3xl font-bold mb-0 text-primary rotate-180;
+}
+
+.SelectedOptionCostInfoTitle{
+    @apply flex gap-5;
+}
+
+.SelectedOptionCostMin{
+    color: #707070;
+}

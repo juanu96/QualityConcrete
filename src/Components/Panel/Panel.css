@@ -1,0 +1,116 @@
+.panel {
+    @apply bg-primary h-[100%] w-full flex flex-col lg:flex-row;
+    min-height: inherit;
+}
+
+.sidebar {
+    @apply w-full lg:w-1/5 flex flex-row lg:flex-col justify-between;
+}
+
+.content {
+    @apply w-full lg:w-4/5 flex flex-col;
+}
+
+.panel-header {
+    @apply h-20;
+}
+
+.panel-body {
+    @apply p-5 md:p-12 bg-secondary w-full;
+    height: -webkit-fill-available;
+}
+
+.ant-steps-item-container {
+    padding-top: 20px;
+}
+
+.stepIconPhone {
+    background-color: black;
+    color: #E95E00;
+    padding: 12px;
+    border-radius: 100%;
+    overflow: visible;
+}
+
+.btn-submit {
+    @apply bg-primary font-bold py-2 px-4 rounded-lg;
+}
+
+.btn-prev,
+.btn-prev:active {
+    @apply bg-[#1C1C1C] text-center rounded-full text-sm md:text-lg;
+    color: white;
+    border: 2px solid #1C1C1C;
+    line-height: 1;
+}
+
+.btn-prev:hover {
+    color: #1C1C1C;
+    background-color: white;
+    border: 2px solid #1C1C1C;
+}
+
+.btn-next,
+.btn-next:active {
+    @apply bg-primary text-center rounded-full text-sm md:text-lg;
+    color: white;
+    border: 2px solid #E95E00;
+    line-height: 1;
+}
+
+.btn-next:hover {
+    color: #E95E00;
+    background-color: white;
+    border: 2px solid #E95E00;
+}
+
+.buttonStep {
+    @apply flex justify-between;
+}
+
+.innerPanel {
+    @apply p-5 rounded-2xl;
+    background-color: white;
+}
+
+.stepIcon {
+    color: #E95E00;
+}
+
+.ant-steps-item-wait .stepIcon {
+    color: #FFC39B;
+}
+
+.calculate-text-subtitle{
+    @apply text-lg font-semibold;
+}
+
+.calculate-milimeters{
+    @apply flex flex-col 2xl:flex-row gap-10;
+}
+
+.calculate-items-milimeters{
+    @apply grid grid-flow-row grid-rows-[repeat(3,auto)] md:grid-rows-[repeat(1,auto)] grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(3,1fr)] gap-10;
+}
+
+.calculate-items-milimeters-card{
+    @apply  rounded-lg py-4 px-8 text-base lg:text-lg xl:text-xl font-bold text-center;
+    background-color: #FFE9D9;
+}
+
+.calculate-items-milimeters-card p{
+    @apply mb-0;
+}
+
+.calculate-items-milimeters-card.activeMilimeters{
+    @apply bg-primary ;
+    color: white
+}
+
+.calculate-items-milimeters-card img{
+    @apply m-auto;
+}
+
+.calculate-items-milimeters-card.activeMilimeters img{
+    filter: invert(1);
+}

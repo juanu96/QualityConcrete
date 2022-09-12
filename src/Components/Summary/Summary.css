@@ -1,0 +1,23 @@
+.inner-summary-content{
+    @apply flex flex-col lg:flex-row gap-5 justify-between p-5;
+}
+
+.flex-icon-content{
+    @apply flex justify-center;
+}
+
+.flex-icon-content svg{
+    @apply text-xl lg:text-2xl mr-5 mt-1;
+}
+
+.flex-icon-content h3{
+    @apply text-xl lg:text-2xl font-bold;
+}
+
+.flex-icon-content p{
+    @apply text-base lg:text-lg;
+}
+
+.summary-text-content{
+    @apply max-w-xs;
+}

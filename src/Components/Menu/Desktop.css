@@ -1,0 +1,54 @@
+.sidebar-logo img{
+    @apply rounded-br-[30px] py-14 px-10 w-full shadow;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.sidebar-menu{
+    @apply mt-10 overflow-hidden relative;
+}
+
+.sidebar-menu .title{
+    @apply text-3xl font-extrabold text-center mb-10;
+    color: white;
+}
+
+.sidebar-menu .menu-items{
+    @apply pl-14;
+}
+
+.sidebar-menu .menu-items li{
+    @apply leading-6 mb-10 font-semibold text-xl pl-3;
+    color: white;
+}
+
+ul{
+    list-style-type: none !important;
+}
+
+.item-menu{
+    @apply cursor-pointer relative;
+}
+
+.menu-active p{
+    @apply py-3 pl-3 rounded-tl-full rounded-bl-full relative;
+    background-color: white;
+    color:black !important;
+}
+
+ul li.item-menu.menu-active::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 10px;
+    left: -40%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.text-menu{
+    @apply leading-8 px-5 mb-10 font-medium text-2xl text-center;
+    color: white;
+}

@@ -1,0 +1,45 @@
+.contentDriveShape{
+    @apply grid lg:grid-flow-col gap-10 max-w-lg lg:max-w-full m-auto;
+}
+
+.listDriveShape{
+    @apply grid grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(2,1fr)] gap-5;
+}
+
+.itemDriveShape{
+    @apply grid grid-cols-2 items-center justify-items-center rounded-xl gap-5 px-1;
+    background-color: #FFE9D9;
+}
+
+.imageDriveShape img{
+    @apply m-auto rounded-xl lg:max-w-[8vw] xl:max-w-[9vw];
+}
+
+.imageDriveShape{
+    @apply flex m-3;
+}
+
+.titleDriveShape{
+    @apply text-primary text-base xl:text-2xl font-bold;
+}
+
+.ActiveDriveShape{
+    @apply bg-primary;
+}
+
+.ActiveDriveShape .titleDriveShape{
+    color:white
+}
+
+.itemSelectedDriveShape{
+    @apply p-5 rounded-xl flex flex-col justify-center min-w-[25vw];
+    background-color: #DEDEDE;
+}
+
+.itemSelectedDriveShape img{
+    @apply rounded-xl;
+}
+
+.itemSelectedDriveShapeText{
+    @apply text-center text-lg xl:text-2xl font-bold mt-5;
+}

@@ -1,0 +1,28 @@
+.TypeOfBrick-content{
+    @apply grid grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)] gap-5 py-28;
+}
+.TypeOfBrick-item{
+    @apply flex justify-between items-center gap-5 rounded-xl p-5;
+    background-color: #FFE9D9;
+}
+
+.activeTypeOfBrick{
+    @apply bg-primary;
+}
+
+.activeTypeOfBrick .TypeOfBrick-item-name{
+    color: white;
+}
+
+.TypeOfBrick-item-image{
+    @apply p-3 rounded-xl;
+    background-color: #F2F2F2;
+}
+
+.TypeOfBrick-item-image img{
+    @apply max-w-[120px] mt-[-40px] object-cover;
+}
+
+.TypeOfBrick-item-name{
+    @apply text-primary text-lg xl:text-xl font-bold;
+}
