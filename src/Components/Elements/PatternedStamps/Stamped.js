@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { Store } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faRulerCombined } from '@fortawesome/free-solid-svg-icons';
 
 export default function Stamped(props) {
+    const store = useContext(Store);
     const [Active, setActive] = useState('');
     const [Minimum, setMinimum] = useState('');
     const [Maximum, setMaximum] = useState('');
@@ -16,6 +18,13 @@ export default function Stamped(props) {
         setCost(item.stampedData.cost);
         setExeed(item.ifYouExceed.exceed);
         setExeedCost(item.ifYouExceed.cost);
+
+        if(props.type === 'stamped'){
+            store.setPpatterndStampsstamped(item)
+        }
+        else if(props.type === 'finish'){
+            store.setPpatterndStampsfinish(item)
+        }
     }
     const convertMoney = (money) => {
         let value = (money).toLocaleString('en-US', {

@@ -20,11 +20,11 @@ export default function Form(props) {
                         <div className='formflex'>
                             <div>
                                 <label>Name</label>
-                                <Input suffix={<FontAwesomeIcon icon={faUser} />} />
+                                <Input onChange={(e) => store.setName(e.target.value)} value={store.name} suffix={<FontAwesomeIcon icon={faUser} />} />
                             </div>
                             <div>
                                 <label>Phone Number</label>
-                                <Input suffix={<FontAwesomeIcon icon={faPhone} />} />
+                                <Input onChange={(e) => store.setPhone(e.target.value)} value={store.phone} suffix={<FontAwesomeIcon icon={faPhone} />} />
                             </div>
                         </div>
 
@@ -32,19 +32,19 @@ export default function Form(props) {
                         <div className='formflex'>
                             <div>
                                 <label>Email</label>
-                                <Input suffix={<FontAwesomeIcon icon={faEnvelope} />} />
+                                <Input onChange={(e) => store.setEmail(e.target.value)} value={store.email} suffix={<FontAwesomeIcon icon={faEnvelope} />} />
                             </div>
 
                             <div>
                                 <label>Address</label>
-                                <Input suffix={<FontAwesomeIcon icon={faMap} />} />
+                                <Input onChange={(e) => store.setAddress(e.target.value)} value={store.address} suffix={<FontAwesomeIcon icon={faMap} />} />
                             </div>
                         </div>
 
                         <div className='formflex'>
                             <div>
                                 <label>Date</label>
-                                <DatePicker suffix={<FontAwesomeIcon icon={faCalendar} />} />
+                                <DatePicker onChange={(e) => store.setDate(e.target.value)} /* defaultValue={store.date} */ suffix={<FontAwesomeIcon icon={faCalendar} />} />
                             </div>
 
                             <div className='check-apply-financing'>

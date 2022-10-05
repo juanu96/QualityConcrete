@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { Store } from '../../../App';
 import './Shape.css'
 
 export default function Shape(props) {
+  const store = useContext(Store);
   const [cardActive, setcardActive] = useState('')
   const [image, setImage] = useState('')
 
   const setData = (item, index) => {
     setImage(item.image.mediaItemUrl)
     setcardActive(index)
+    store.setDshapes(item)
   }
 
   return (

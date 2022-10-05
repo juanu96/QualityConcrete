@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { Store } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRulerCombined } from '@fortawesome/free-solid-svg-icons';
 import './OptionCost.css'
 
 export default function OptionCost(props) {
+    const store = useContext(Store);
     const [ActiveOptionCost, setActiveOptionCost] = useState('')
     const [ActiveOptionCostImage, setActiveOptionCostImage] = useState('')
     const [ActiveOptionCostName, setActiveOptionCostName] = useState('')
@@ -16,6 +18,7 @@ export default function OptionCost(props) {
         setActiveOptionCostName(data.name)
         setActiveOptionCostMin(data.min)
         setActiveOptionCostMax(data.max)
+        store.setDoptions(data)
     }
     const convertMoney = (money) => {
         let value = (money).toLocaleString('en-US', {

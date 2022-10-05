@@ -1,5 +1,6 @@
 .inner-summary-content{
-    @apply flex flex-col lg:flex-row gap-5 justify-between p-5;
+    @apply grid grid-flow-col grid-rows-[repeat(4,auto)] md:grid-rows-[repeat(2,auto)] grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] gap-5 items-start justify-start p-5;
+    justify-items: start;
 }
 
 .flex-icon-content{
@@ -21,3 +22,16 @@
 .summary-text-content{
     @apply max-w-xs;
 }
+
+.stamped-finish{
+    @apply flex gap-10;
+}
+
+.summary-text-content img{
+    @apply w-40 h-20 object-cover;
+}
+
+.stamped-finish img, .brick img{
+    @apply w-28 h-28 object-contain;
+}
+

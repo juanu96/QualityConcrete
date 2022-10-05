@@ -37,7 +37,7 @@ const steps = [
     {
         id: 5,
         title: '',
-        icon: <FontAwesomeIcon icon={faPhoneAlt} className='stepIconPhone' />
+        icon: <FontAwesomeIcon icon={faPhoneAlt} onClick={() => window.open('tel:(317) 619-2989', '_self')} className='stepIconPhone cursor-pointer' />
     }
 ]
 

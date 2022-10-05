@@ -11,6 +11,7 @@ AOS.init({
 export const Store = createContext(null);
 
 function App() {
+  let today = new Date()
   const [CurrentService, setCurrentService] = useState('')
   const [RetainingWallsStep, setRetainingWallsStep] = useState(1)
   const [PatioStep, setPatioStep] = useState(1)
@@ -21,7 +22,27 @@ function App() {
   const [calculateWidth, setCalculateWidth] = useState()
   const [calculateHeight, setCalculateHeight] = useState()
   const [calculateCommercial, setCalculateCommercial] = useState(0.10)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [address, setAddress] = useState('')
+  const [date, setDate] = useState(today.toLocaleDateString("en-US"))
+  const [Rstyle, setRstyle] = useState(null)
+  const [Rtypebrick, setRtypebrick] = useState(null)
+  const [RcustomDesign, setRcustomDesign] = useState(null)
+  const [RcolorPallete, setRcolorPallete] = useState({type: null, color: null})
+  const [Ppergolas, setPpergolas] = useState(null)
+  const [Pshapes, setPshapes] = useState(null)
+  const [PpatterndStampsstamped, setPpatterndStampsstamped] = useState(null)
+  const [PpatterndStampsfinish, setPpatterndStampsfinish] = useState(null)
+  const [PcolorPallete, setPcolorPallete] = useState({type: null, color: null})
+  const [Dstyles, setDstyles] = useState(null)
+  const [Dadvantages, setDadvantages] = useState(null)
+  const [Dshapes, setDshapes] = useState(null)
+  const [Doptions, setDoptions] = useState(null)
 
+
+  //console.log(today.toLocaleDateString("en-US"))
   return (
     <Store.Provider
       value={{
@@ -45,6 +66,29 @@ function App() {
         setCalculateHeight,
         calculateCommercial,
         setCalculateCommercial,
+        name,
+        setName,
+        email,
+        setEmail,
+        phone,
+        setPhone,
+        address,
+        setAddress,
+        date,
+        setDate,
+        Ppergolas, setPpergolas,
+        Pshapes, setPshapes,
+        PpatterndStampsstamped, setPpatterndStampsstamped,
+        PpatterndStampsfinish, setPpatterndStampsfinish,
+        PcolorPallete, setPcolorPallete,
+        Rstyle, setRstyle,
+        Rtypebrick, setRtypebrick,
+        RcustomDesign, setRcustomDesign,
+        RcolorPallete, setRcolorPallete,
+        Dstyles, setDstyles,
+        Dadvantages, setDadvantages,
+        Dshapes, setDshapes,
+        Doptions, setDoptions,
       }}>
       <div className='App'>
         {

@@ -8,19 +8,25 @@ import { Skeleton } from 'antd';
 export default function Styles(props) {
   const [basicMeasure, setBasicMeasure] = useState('')
   const [basicCost, setBasicCost] = useState('')
-  const [height, setHeight] = useState('')
-  const [lenght, setLenght] = useState('')
-  const [wide, setWide] = useState('')
+  const [height, setHeight] = useState(0)
+  const [lenght, setLenght] = useState(0)
+  const [wide, setWide] = useState(0)
   const [cardActive, setcardActive] = useState('')
   const store = useContext(Store);
+  
 
   const setData = (item, index) => {
     setBasicMeasure(item.measure.basicMeasure)
     setBasicCost(item.measure.basicCost)
-    setHeight(item.customCreation.height)
-    setLenght(item.customCreation.lenght)
-    setWide(item.customCreation.wide)
     setcardActive(index)
+    
+    if (store.CurrentService === 'PATIO') {
+      store.setPpergolas(item)
+    } else if (store.CurrentService === 'RETAINING WALLS') {
+      store.setRstyle(item)
+    } else if (store.CurrentService === 'DRIVEWAYS') {
+      store.setDstyles(item)
+    }
   }
 
   return (
@@ -90,26 +96,28 @@ export default function Styles(props) {
                 <div className='card-item-element-text'>
                   <div className='custom-creation-items'>
                     <p>Height</p>
-                    <input className='custom-creation-input' placeholder={height} />
+                    <input className='custom-creation-input' onChange={(e) => setHeight(e.target.value)} placeholder={height} />
                   </div>
                   <div className='custom-creation-items'>
                     <p>Lenght</p>
-                    <input className='custom-creation-input' placeholder={lenght} />
+                    <input className='custom-creation-input' onChange={(e) => setLenght(e.target.value)} placeholder={lenght} />
                   </div>
                   <div className='custom-creation-items'>
                     <p>Wide</p>
-                    <input className='custom-creation-input' placeholder={wide} />
+                    <input className='custom-creation-input' onChange={(e) => setWide(e.target.value)} placeholder={wide} />
                   </div>
                 </div>
               </div>
-              <div>
+              {/* <div className='smallCalculator'>
                 <div>
-                  This is how much concrete you will need for your project
+                  <p>This is how much concrete you will need for your project</p>
+                  <h6>{lenght && height && wide ? concrete.toFixed(2) : 0}</h6>
                 </div>
                 <div>
                   This is how many truck loads you may need
+                  <h6>{lenght && height && wide ? Math.ceil(concrete / 8.3) : 0}</h6>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Skeleton>
         </div>
@@ -125,7 +133,7 @@ export default function Styles(props) {
         store.CurrentService === "RETAINING WALLS" ?
           <style>{`
                   .card-item-element img{
-                    max-width: 120px !important;
+                    max-wide: 120px !important;
                     margin-top: -50px;
                   }
 
