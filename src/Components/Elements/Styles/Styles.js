@@ -13,13 +13,13 @@ export default function Styles(props) {
   const [wide, setWide] = useState(0)
   const [cardActive, setcardActive] = useState('')
   const store = useContext(Store);
-  
+
 
   const setData = (item, index) => {
     setBasicMeasure(item.measure.basicMeasure)
     setBasicCost(item.measure.basicCost)
     setcardActive(index)
-    
+
     if (store.CurrentService === 'PATIO') {
       store.setPpergolas(item)
     } else if (store.CurrentService === 'RETAINING WALLS') {

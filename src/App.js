@@ -26,7 +26,7 @@ function App() {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
-  const [date, setDate] = useState(today.toLocaleDateString("en-US"))
+  const [date, setDate] = useState()
   const [Rstyle, setRstyle] = useState(null)
   const [Rtypebrick, setRtypebrick] = useState(null)
   const [RcustomDesign, setRcustomDesign] = useState(null)
@@ -41,8 +41,6 @@ function App() {
   const [Dshapes, setDshapes] = useState(null)
   const [Doptions, setDoptions] = useState(null)
 
-
-  //console.log(today.toLocaleDateString("en-US"))
   return (
     <Store.Provider
       value={{

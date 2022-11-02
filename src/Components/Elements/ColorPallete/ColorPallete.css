@@ -19,13 +19,13 @@
 }
 
 .itemButtonColorShape{
-    @apply w-max xl:w-2/5 rounded-full px-3 py-1 text-center cursor-pointer;
+    @apply w-max xl:w-2/5 rounded-full px-3 py-1 text-center cursor-pointer text-xs;
     background-color: black;
     color:white;
 }
 
-.activeItemColorShape{
-    @apply bg-primary;
+.activeItemColorShape, .SubIndexColor{
+    @apply !bg-primary;
 }
 
 .activeItemColorShape .itemTextColorShape{

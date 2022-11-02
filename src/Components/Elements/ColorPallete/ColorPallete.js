@@ -7,9 +7,11 @@ export default function ColorPallete(props) {
   const [ItemActiveColorIndex, setItemActiveColorIndex] = useState('')
   const [Name, setName] = useState('')
   const [Color, setColor] = useState('')
+  const [SubIndexColor, setSubIndexColor] = useState('')
   const store = useContext(Store);
-  
-  const setDataColor = (item, name) => {
+
+  const setDataColor = (item, name, index) => {
+    setSubIndexColor(index)
     if (store.CurrentService === 'PATIO') {
       store.setPcolorPallete({ type: name, color: item })
     } else if (store.CurrentService === 'RETAINING WALLS') {
@@ -20,7 +22,6 @@ export default function ColorPallete(props) {
   return (
     <div className='containerCollorPallete'>
       <div className='itemSelectShape' data-aos="fade-up" data-aos-duration={1000} >
-
         {
           props.data ?
             props.data.map((item, index) => {
@@ -49,11 +50,10 @@ export default function ColorPallete(props) {
               ItemActiveColor.map((item, index) => {
                 if (index === 0 && Color === '') {
                   setColor(item)
-                  setDataColor(item, Name)
-                  //console.log(Name)
+                  setDataColor(item, Name, index)
                 }
                 return (
-                  <div className='singleItemPalletColor' onClick={() => { setColor(item); setDataColor(item, Name) }}>
+                  <div className={`${index === SubIndexColor ? 'SubIndexColor' : ''} singleItemPalletColor`} onClick={() => { setColor(item); setDataColor(item, Name, index) }}>
                     <div style={{ backgroundColor: item.color }} className='singleColorPalletcolor'></div>
                     <div className='singleColorPalletName'>
                       {item.name}
